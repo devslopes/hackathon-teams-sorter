@@ -43,7 +43,7 @@ export const createGroups = (
   return groups;
 };
 
-function getGroupOverlap(group: Student[], student: Student): number {
+export function getGroupOverlap(group: Student[], student: Student): number {
   return group.reduce((overlap, groupMember) => {
     const commonTimes = groupMember.times.filter((groupMemberTime) =>
       student.times.some(
